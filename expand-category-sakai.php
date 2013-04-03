@@ -20,7 +20,7 @@ function extra_category_fields( $tag ) {
 ?>
 <tr class="form-field">
 	<th><label for="extra_text">その他テキスト</label></th>
-	<td><textarea name="Cat_meta[extra_text]" id="extra_text" size="25" value="<?php if(isset ( $cat_meta['extra_text'])) echo esc_html($cat_meta['extra_text']) ?>" ></textarea></td>
+	<td><textarea name="Cat_meta[extra_text]" id="extra_text" ><?php if(isset ( $cat_meta['extra_text'])) echo esc_html($cat_meta['extra_text']) ?></textarea></td>
 </tr>
 
 <?php
