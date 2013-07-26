@@ -1,34 +1,45 @@
-#ライセンス
-WordpressなんでGPS2です。
+=== Expand Category Sakai ===
+Contributors: tomotomobile
+Tags: shortcode, post, category
+Requires at least: 3.5.2
+Tested up to: 3.5.2
+Stable tag: 3.5.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-#利用規約
-http://www.webopixel.net/wordpress/436.html
-こちらの記事に書いてあったことを丸コピしただけなので
-制作した本人も理解してないところが多々あります。
-利用は自己責任でお願いします。
-あんまり拡散されても迷惑なので、利用は自己責任でお願いします。
-大切なことなので2回書きました。
+Extend categories field. Provides Shortcodes to display the extended category meta-data.
 
-今のところwordpress.orgに上げるつもりはありません。
+== Description ==
+
+What is "Sakai"?
+
+It is the city of Osaka in Japan. There is a Wordpress user community named "WordBar Sakai". Expand Category Sakai plugin is built by a hands-on some day.
 
 
-#設置サンプル
+= Special Thanks =
+[webOpixel](http://www.webopixel.net)
+
+= Usage =
+
+[Read me.](https://github.com/tomotomo/expand-category-sakai)
+
+== Installation ==
+
+1. Upload the entire `expand-category-sakai` folder to the `/wp-content/plugins/` directory.
+1. Activate the plugin through the 'Plugins' menu in WordPress.
+
+You will find an additional field while Edit categories.
 
 
-## 例1　サイドバーに表示
-sidebar.php
-{code}
-			<aside class="widget">
-			<?php
-			if ($category = get_the_category()) {
-				foreach ($category as $value) {
-					$cat_data = get_option('cat_'.intval($value->term_id));
-					print_r($cat_data['extra_text']);
-				}
+== Frequently Asked Questions ==
 
-			}
-			?>
-			</aside>
-{/code}
+You have no question because of simple plugin.
 
-## 例2　うまい使い方を考えてください
+
+== Changelog ==
+
+= 1.0 =
+First release.
+
+
+
