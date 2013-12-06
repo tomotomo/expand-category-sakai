@@ -2,7 +2,7 @@
 
 
 ##ライセンス
-WordpressなんでGPS2です。
+WordpressなんでGPL2です。
 
 ##利用規約
 http://www.webopixel.net/wordpress/436.html
