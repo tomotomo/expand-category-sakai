@@ -1,10 +1,10 @@
-expand-category-sakai
-=====================
+# expand-category-sakai
 
-#ライセンス
+
+##ライセンス
 WordpressなんでGPS2です。
 
-#利用規約
+##利用規約
 http://www.webopixel.net/wordpress/436.html
 こちらの記事の管理人に許可をもらって丸コピしたので
 制作した本人も理解してないところが多々あります。
@@ -15,12 +15,12 @@ http://www.webopixel.net/wordpress/436.html
 今のところwordpress.orgに上げるつもりがあります。
 
 
-#設置サンプル
+##設置サンプル
 
 
-## 例1　サイドバーに表示
+### 例1　サイドバーに表示
 sidebar.php
-{code}
+```
 <aside class="widget">
 	<?php
 	if ($category = get_the_category()) {
@@ -32,9 +32,9 @@ sidebar.php
 	}
 	?>
 </aside>
-{/code}
+```
 
-## 例2　記事本文中に挿入
-{code}
+### 例2　記事本文中に挿入
+```
 	[exc-sakai]
-{/code}
+```
