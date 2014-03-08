@@ -21,17 +21,18 @@ http://www.webopixel.net/wordpress/436.html
 ## 例1　サイドバーに表示
 sidebar.php
 {code}
-<aside class="widget">
 	<?php
-	if ($category = get_the_category()) {
+	if ($category = get_the_category()):
+?>
+<aside class="widget">
 		foreach ($category as $value) {
 			$cat_data = get_option('cat_'.intval($value->term_id));
 			print_r($cat_data['extra_text']);
 		}
-
-	}
-	?>
 </aside>
+	<?php
+	endif;
+	?>
 {/code}
 
 ## 例2　記事本文中に挿入
