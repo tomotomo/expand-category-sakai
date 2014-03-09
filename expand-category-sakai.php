@@ -11,7 +11,9 @@ Text Domain: exc-sakai
 /**
  * Original Articla http://www.webopixel.net/wordpress/436.html
  */
-new ExpandCategorySakai();
+
+$expand_category_sakai = new ExpandCategorySakai();
+$expand_category_sakai->execute();
 
 class ExpandCategorySakai {
 
@@ -22,9 +24,12 @@ class ExpandCategorySakai {
 	const TEXTDOMAIN = 'exc-sakai';
 	protected $plugin_url;
 
-	public function __construct() {
+	public function execute() {
 		$this->plugin_url = plugins_url('', __FILE__);
+        add_action('plugins_loaded', array($this, 'plugins_loaded'));
+    }
 
+    public function plugins_loaded() {
 		// 管理画面のカテゴリ編集画面を拡張
 		add_action('edit_category_form_fields', array($this, 'extra_category_fields'));
 
@@ -39,7 +44,7 @@ class ExpandCategorySakai {
 		<tr class="form-field">
 			<th><label for="extra_text"><?php _e('Extra text', self::TEXTDOMAIN)?><br />
 					<code class="description">(extra_text)</code></label></th>
-			<td><textarea name="Cat_meta[extra_text]" id="extra_text" ><?php if (isset($cat_meta['extra_text'])) echo esc_html($cat_meta['extra_text']) ?></textarea></td>
+			<td><textarea name="Cat_meta[extra_text]" id="extra_text" ><?php if (isset($cat_meta['extra_text'])) echo esc_textarea($cat_meta['extra_text']) ?></textarea></td>
 		</tr>
 
 		<?php
