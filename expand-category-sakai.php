@@ -4,7 +4,7 @@ Plugin Name: Expand Category Sakai
 Description: Word Bar Sakai 2013/03/30
 Author: Tomoyuki Sugita
 Author URI: http://tomotomosnippet.blogspot.jp/
-Version: 1.0
+Version: 1.0.1
 Text Domain: exc-sakai
  */
 

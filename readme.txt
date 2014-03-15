@@ -2,8 +2,8 @@
 Contributors: tomotomobile
 Tags: shortcode, post, category
 Requires at least: 3.5.2
-Tested up to: 3.5.2
-Stable tag: 3.5.2
+Tested up to: 3.8.1
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,8 +38,11 @@ You have no question because of simple plugin.
 
 == Changelog ==
 
+= 1.0.1 =
+* Security fix.
+
 = 1.0 =
-First release.
+* First release.
 
 
 
